@@ -24,10 +24,10 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"github.com/paypal/junodb/pkg/util"
+	"github.com/paypal/junodb/third_party/forked/golang/glog"
+	"github.com/paypal/junodb/pkg/logging/otel"
 
-	"juno/pkg/logging/otel"
-	"juno/pkg/util"
-	"juno/third_party/forked/golang/glog"
 )
 
 type ProcStat struct {
