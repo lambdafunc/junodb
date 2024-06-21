@@ -23,7 +23,6 @@ import (
 
 	"github.com/paypal/junodb/pkg/io"
 	"github.com/paypal/junodb/pkg/util"
-	"github.com/paypal/junodb/internal/cli"
 	cal "github.com/paypal/junodb/pkg/logging/cal/config"
 )
 
@@ -56,9 +55,6 @@ func (c *Config) validate(useGetTLS bool) error {
 	}
 	if c.DefaultTimeToLive < 0 {
 		return fmt.Errorf("Config.DefaultTimeToLive is negative.")
-	}
-	if c.Server.SSLEnabled && !useGetTLS && !cli.TLSInitialized() {
-		return fmt.Errorf("getTLSConfig is nil.")
 	}
 	return nil
 }

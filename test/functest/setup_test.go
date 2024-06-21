@@ -110,7 +110,7 @@ func setup() {
 	var err error
 
 	if proxyClient, err = client.New(cfg); err != nil {
-		glog.Exitf("proxyClient create in set up is null, fail")
+		glog.Exitf("%s proxyClient create in set up is null, fail", err)
 	}
 	cfgShare = cfg
 	cfgShare.Namespace = "NS2"
